@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.loading-container {
+    position: relative;
+}
+
+.wavify {
+    background-color: black;
+}
+
+.wavify span {
+    position: relative;
+    display: inline-block;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white; /* Add this line to set the text color to white */
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
+.wavify span:not(:last-child) {
+    margin-right: 10px; /* Adjust the space as needed */
+}
+
+@keyframes waviy {
+    0%, 40%, 100% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-20px);
+    }
+}
